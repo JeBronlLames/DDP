@@ -1,0 +1,38 @@
+---
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r packages, message = FALSE, echo=FALSE}
+require(leaflet)
+```
+
+## April 17, 2017
+
+```{r map, echo = FALSE}
+logo <- "http://www.printyourbrackets.com/nba-logos/cleveland-cavaliers-logo.png"
+
+map <- addTiles(leaflet())
+mapMarked <- map %>% addMarkers(lat = 41.4966, lng = -81.6882,
+                                popup = "GO CAVS!!",
+                                icon = makeIcon(iconUrl = logo,
+                                                iconWidth = 122,
+                                                iconHeight = 80,
+                                                iconAnchorX = 145,
+                                                iconAnchorY = 100))
+mapMarked
+```
+
+
+
+
+
+
+
+
+
+
+
